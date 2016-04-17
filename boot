@@ -2,5 +2,7 @@
 ! $DIX && >&2 echo "DIX_MISSING" && exit 1
 
 DIX_ON_AFTER(){
-	log.info "$DIX_PKG Installed successfully"
+	show.title "$DIX_PKG booted successfully"
 }
+
+show.title "Booting $DIX_PKG"
