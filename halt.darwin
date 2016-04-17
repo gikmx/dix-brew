@@ -1,0 +1,9 @@
+[ ! $DIX ] && >&2 echo "${BASH_SOURCE[0]}:DIX404" && exit 1
+! sys.is darwin && dix.error "Invalid Platform"
+
+# If not available, install homebrew.
+! sys.has brew && log.error "Brew is not present, skipping uninstall." && return 1
+
+log.info "Uninstalling Brew"
+url='https://raw.githubusercontent.com/Homebrew/install/master/uninstall'
+/usr/bin/ruby -e "$(curl -fsSL $url)"
